@@ -1,2 +1,3 @@
-# fastapi-web-development
-FastAPI Web Development
+# FastAPI Web Development
+
+Personal journey learning FastAPI.
