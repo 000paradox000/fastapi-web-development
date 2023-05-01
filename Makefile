@@ -8,3 +8,11 @@ lint-update-local:
 
 install-requirements-local:
 	pip install -r requirements/local.txt
+
+run-local:
+	uvicorn main:app \
+		--reload \
+		--host=0.0.0.0 \
+		--port=9600 \
+		--log-level=debug \
+		--use-colors
