@@ -6,22 +6,22 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+
 class Item(BaseModel):
     name: str
     price: Decimal
     is_offer: Union[bool, None] = None
 
+
 @app.get("/")
 def index():
-    return {
-        "message": "Hello World!"
-    }
+    return {"message": "Hello World!"}
+
 
 @app.get("/{name}")
 def say_hello(name: str):
-    return {
-        "message": f"Hello {name}"
-    }
+    return {"message": f"Hello {name}"}
+
 
 @app.get("/items/{item_id}")
 def get_item(item_id: int, q: Union[str, None] = None):
@@ -29,6 +29,7 @@ def get_item(item_id: int, q: Union[str, None] = None):
         "item_id": item_id,
         "q": q,
     }
+
 
 @app.put("/items/{item_id}")
 def put_item(item_id: int, item: Item):
