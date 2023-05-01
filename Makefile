@@ -16,3 +16,6 @@ run-local:
 		--port=9600 \
 		--log-level=debug \
 		--use-colors
+
+open-api-json-local:
+	open http://0.0.0.0:9600/openapi.json
